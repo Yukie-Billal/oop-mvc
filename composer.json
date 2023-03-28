@@ -1,0 +1,14 @@
+{
+    "name": "user/yukie_app",
+    "type": "no",
+    "authors": [
+        {
+            "name": "GMNocK",
+            "email": "userwith.immortal@gmail.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "server": "php -S localhost:1000"
+    }
+}
