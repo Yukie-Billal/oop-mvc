@@ -2,11 +2,11 @@
 if (!session_id()) {session_start();}
 // use App\Controllers\Controller;
 // use Routes\Route;
-require 'app/helper/helper.php';
-
 require 'config/app.php';
+require 'app/helper/helper.php';
 require 'app/kernel.php';
 require 'routes/kernel.php';
+
 
 class App
 {

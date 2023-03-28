@@ -1,7 +1,7 @@
 <?php 
-
 function view($view,$data = [])
 {
+    $base_url = 'public/';
     include 'resources/views/' . $view . '.php';
 }
 

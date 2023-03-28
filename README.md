@@ -16,7 +16,6 @@ Atau dengan cara manual anda, sebagai contoh :
 
   ```
     php -S localhost:1000
-
   ```
   
 ### Path Set Up
@@ -64,12 +63,10 @@ Model Sendiri Terletak Pada Direktori `app/models`. Anda Bisa Membuat Model Dala
 Model Memiliki Kebebasan dalam hal Penamaan, Namun Dalam pemberian akses tabel anda diharuskan memperikan sebuah properti `table` dalam class model anda. seperti contoh :
 
 ```php
-
     class Produk
     {
         protected $table = 'your_table_name';
     }
-
 ```
 
 ### View
