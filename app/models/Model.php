@@ -41,15 +41,26 @@ class Model
     }
     public function find($value)
     {
-        $sql = mysqli_query($this->koneksi, "SELECT * FROM $this->table WHERE $this->primaryKey ='$value'");
-        return mysqli_fetch_array($sql);
+        return mysqli_query($this->koneksi, "SELECT * FROM $this->table WHERE $this->primaryKey ='$value'");
+        
     }
-    public function delete($column, $value)
+    public function delete($value, $column = null)
     {
+        if ($column == null) {
+            $column = $this->primaryKey;
+        }
         return mysqli_query($this->koneksi, " DELETE FROM $this->table WHERE $column ='$value'");
     }
     public function insert($params)
     {
-        mysqli_query($this->koneksi, "INSERT INTO $this->table VALUES('','$params[1]','$params[2]','$params[3]')");
+        return mysqli_query($this->koneksi, "INSERT INTO $this->table VALUES('','$params[1]','$params[2]','$params[3]')");
+    }
+    public function query($query)
+    {
+        return mysqli_query($this->koneksi, $query);
+    }
+    public function where($column, $value)
+    {
+        return mysqli_query($this->koneksi,"SELECT * FROM $this->table WHERE $column = '$value'");
     }
 }

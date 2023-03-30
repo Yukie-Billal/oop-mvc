@@ -32,16 +32,6 @@ Jika anda ingin mengubah nama root direktori, anda diharuskan menyetel ulang con
 
   ```
   
-### Controller Set Up
-Controller Terletak Pada Direktori `app/controllers`. Anda Bisa Membuat Controller Dalam Directori Tersebut. Dan Mendaftarkannya Pada `kernel.php`
-
-Penamaan Controller Diharuskan Diakhiri Dengan Kata `Controller` Diawali Huruf Besar, Begitu Juga Nama Controller Anda. Sebagai Contoh
-
-`ProdukController`
-
-Anda Dapat Mengubah Default Controller Pada configurasi uri yang terdapat pada `config/uri.php` dengan controller yang anda punya
-
-
 ### Database Set Up
 
 ##### NOTE  : Database yang Digunakan Untuk Saat ini hanya Mysql, untuk itu driver selain mysql tidak akan berjalan pada program ini.
@@ -56,6 +46,34 @@ Untuk Melakukan Set Up Database, Anda dapat membuka direktori `config/database.p
     define('DB_NAME', 'app_yukie');
 
 ```
+
+### Router
+
+Router Untuk mempermudah aplikasi anda ketika diakses melalui uri
+
+Anda bisa membuat link yang anda inginkan untuk mengakses aplikasi anda, route sendiri terletak dalam direktori `routes/web.php`
+
+Berikut adalah contoh route sederhana :
+
+```php
+    $route->get('/', [Controller::class, 'index']);
+```
+
+metode route yang tersedia untuk saat ini hanya get dan post.
+
+Dalam Contoh Diatas parameter pertama adalah uri yang akan di panggil dalam browser kedua.
+Paremeter kedua bertipe array index pertama adalah controller milik anda, index kedua adalah function yang anda miliki dalam controller anda
+
+### Controller Set Up
+Controller Terletak Pada Direktori `app/controllers`. Anda Bisa Membuat Controller Dalam Directori Tersebut. Dan Mendaftarkannya Pada `kernel.php`
+
+Penamaan Controller Diharuskan Diakhiri Dengan Kata `Controller` Diawali Huruf Besar, Begitu Juga Nama Controller Anda. Sebagai Contoh
+
+`ProdukController`
+
+Anda Dapat Mengubah Default Controller Pada configurasi uri yang terdapat pada `config/uri.php` dengan controller yang anda punya
+
+
 
 ### Model
 Model Sendiri Terletak Pada Direktori `app/models`. Anda Bisa Membuat Model Dalam Directori Tersebut. Dan Mendaftarkannya Pada `kernel.php`

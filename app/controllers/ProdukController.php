@@ -6,7 +6,7 @@ class ProdukController extends Controller
     {
         $produk = new Produk;
         return view("produk/index",[
-            'produk' => $produk->get(),
+            'produk' => $produk->where('harga','15000'),
         ]);
     }
 }
