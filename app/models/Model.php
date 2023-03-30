@@ -28,15 +28,10 @@ class Model
     {
         $table = $this->table;
         if ($column == null) {
-            // if ($this->hidden) {
-            //     $sql = mysqli_query($this->koneksi, "SELECT * FROM $table");
-            // } else {
-                $sql = mysqli_query($this->koneksi, "SELECT * FROM $table");
-            // }
+            $sql = mysqli_query($this->koneksi, "SELECT * FROM $table");
         } else {
 
         }
-        // $data = mysqli_fetch_array($sql);
         return $sql;
     }
     public function find($value)

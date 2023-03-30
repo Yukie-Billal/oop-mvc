@@ -1,7 +1,10 @@
 <?php 
-
+require 'helper/helper.php';
+//  MODELS
 require 'models/Model.php';
-require 'models/Produk.php';
-require 'controllers/BaseController.php';
+require 'models/User.php';
+// require 'your model here';
+
+// Controller
 require 'controllers/Controller.php';
-require 'controllers/ProdukController.php';
+// require 'your controller here';

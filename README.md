@@ -2,7 +2,7 @@
 Aplikasi OOP PHP MVC Implementasi Hasil pembelajaran dan Adaptasi Logika Framework CI Dan Laravel
 
 
-## Constibutor
+## Pengelola
 - [Yukie M Billal](https://github.com/Yukie-Billal).
 
 
@@ -26,9 +26,9 @@ Jika anda ingin mengubah nama root direktori, anda diharuskan menyetel ulang con
     define("APP_URL", "http://localhost:1000/");
 
     define("BASE_PATH", APP_URL."yukie_app/");
-    define("CONTROL_PATH", BASE_PATH."app/controllers/");
-    define("VIEW_PATH", BASE_PATH."resources/views/");
-    define("PUBLIC_PATH", BASE_PATH."public/");
+    define("CONTROL_PATH", APP_URL."app/controllers/");
+    define("VIEW_PATH", "resources/views/");
+    define("PUBLIC_PATH", APP_URL."public/");
 
   ```
   
@@ -43,7 +43,7 @@ Untuk Melakukan Set Up Database, Anda dapat membuka direktori `config/database.p
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
     define('DB_PASS', '');
-    define('DB_NAME', 'app_yukie');
+    define('DB_NAME', 'database_name');
 
 ```
 
@@ -59,15 +59,16 @@ Berikut adalah contoh route sederhana :
     $route->get('/', [Controller::class, 'index']);
 ```
 
-metode route yang tersedia untuk saat ini hanya get dan post.
+Metode Route / Request yang tersedia untuk saat ini hanya get dan post.
 
-Dalam Contoh Diatas parameter pertama adalah uri yang akan di panggil dalam browser kedua.
-Paremeter kedua bertipe array index pertama adalah controller milik anda, index kedua adalah function yang anda miliki dalam controller anda
+
+Dalam Contoh Diatas parameter pertama adalah uri yang akan di panggil dalam browser.
+Paremeter kedua bertipe array index pertama adalah controller milik anda, Index kedua adalah function yang anda miliki dalam controller anda.
 
 ### Controller Set Up
 Controller Terletak Pada Direktori `app/controllers`. Anda Bisa Membuat Controller Dalam Directori Tersebut. Dan Mendaftarkannya Pada `kernel.php`
 
-Penamaan Controller Diharuskan Diakhiri Dengan Kata `Controller` Diawali Huruf Besar, Begitu Juga Nama Controller Anda. Sebagai Contoh
+Penamaan Controller Disarankan Diakhiri Dengan Kata `Controller` Diawali Huruf Besar, Begitu Juga Nama Controller Anda. Sebagai Contoh
 
 `ProdukController`
 
@@ -138,4 +139,4 @@ Anda Diharuskan Melakukan registrasi Model dan Controller yang anda punya Dalam 
 ### Support
 Seperti Yang Dilihat, Masih Ada keterbatasan dalam hal route dan struktur, Oleh Karena Itu saya sebagai pengelola mengharapkan banyaknya saran untuk terus mengembangkan logika program yang sedang saya rancang ini
 
-Selamat Mencoba
+Selamat Mencoba, Terima Kasih !
